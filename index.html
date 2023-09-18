@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="InViG: Open-Ended Interactive Visual Grounding in Human-Robot Interaction with 500K Dialogues">
+  <meta name="keywords" content="Interactive Visual Grounding, Open-Ended Human-Robot Interaction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InViG: Open-Ended Interactive Visual Grounding in Human-Robot Interaction with 500K Dialogues</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Hanbo Zhang*<sup>*</sup>,
+            </span>
+            <span class="author-block">
+              Jie Xu*<sup>*</sup>,
+            </span>
+            <span class="author-block">
+              Yuchen Mo<sup>*</sup>,
+            </span>
+            <span class="author-block">
+              Tao Kong<sup>*</sup>,
+            </span>
+          </div>
+
+          <br>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">ByteDance Research &nbsp;&nbsp;</span>
+            <span class="author-block"><sup>*</sup>Equal Contribution </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="static/paper/invig.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://github.com/openivg/openivg.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item open_left_door_mute">
+          <video poster="" id="open_left_door_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/demo1.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item open_cabinet_drawer_mute">
+          <video poster="" id="open_cabinet_drawer_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/demo2.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item open_right_door_mute">
+          <video poster="" id="open_right_door_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/demo3.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Ambiguity is ubiquitous in human communication. Previous approaches in Human-Robot Interaction (HRI) have
+            often relied on predefined interaction templates, leading to reduced performance in realistic and open-ended
+            scenarios. To address these issues, we present a large-scale dataset, \invig, for interactive visual
+            grounding under language ambiguity. Our dataset comprises over 520K images accompanied by open-ended goal-
+            oriented disambiguation dialogues, encompassing millions of object instances and corresponding question-
+            answer pairs. Leveraging the \invig dataset, we conduct extensive studies and propose a set of baseline
+            solutions for end-to-end interactive visual disambiguation and grounding, achieving a 45.6\% success rate
+            during validation. To the best of our knowledge, the \invig dataset is the first large-scale dataset for
+            resolving open-ended interactive visual grounding, presenting a practical yet highly challenging benchmark
+            for ambiguity-aware HRI.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src=""
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- /Paper video. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">InViG 520K Dataset</h2>
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>
+            We first sample and filter 21K images from OpemImages Dataset, based on which we recruit annotators to
+            label each image with one or more targets and human-to-human dialogues. With 21K labeled data, we further
+            develop an annotation system to automatically generate HRI data. We further generate 500K goal-oriented
+            disambiguation dialogues in extremely low costs. Therefore, in total, our InViG dataset contains more than
+            520K dialogues for interactive visual grounding. We demonstrate the comparison between InViG Dataset and
+            previous works in Table I. In summary, InViG dataset is proposed to solve the problem of object-oriented
+            open-ended interactive ambiguity in HRI, which widely appears in daily communications between humans.
+            Therefore, differentiated from all previous works, InViG dataset contains extensive interactive disambi
+            guation data to facilitate the development of HRI systems. We also show the statistics of InViG 520K in
+            Figure 1.
+          </p>
+        </div>
+        </h3>
+        <img id="comparison" width="70%" src="static/images/comptable.png">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- main result -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Samples</h2>
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>
+            Some samples from InViG 500K:
+          </p>
+        </div>
+        </h3>
+        <img id="main_result" width="100%" src="static/images/invig_500k_examples.jpg">
+      </div>
+    </div>
+    <!-- force -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are
+            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has
+            a smaller force variance, indicating less oscillation and more stable contact during the rollout.
+          </p>
+        </div>
+        </h3>
+        <img id="force" width="100%" src="static/images/force.jpeg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    &lt;!&ndash; main result &ndash;&gt;-->
+<!--     <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-six-fifths">-->
+<!--        <h2 class="title is-3">Samples</h2>-->
+<!--        <h3 class="has-text-centered">-->
+<!--          <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            Some samples from InViG 500K:-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        </h3>-->
+<!--        <img id="main_result" width="100%" src="static/images/invig_500k_examples.jpg">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; force &ndash;&gt;-->
+<!--     <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-six-fifths">-->
+<!--        <h3 class="has-text-centered">-->
+<!--          <div class="content has-text-justified">-->
+<!--          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are-->
+<!--            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has-->
+<!--            a smaller force variance, indicating less oscillation and more stable contact during the rollout.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        </h3>-->
+<!--        <img id="force" width="100%" src="static/images/force.jpeg">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section class="section">-->
+
+<!--  &lt;!&ndash; open_right_door &ndash;&gt;-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered">-->
+
+<!--      &lt;!&ndash; Behavior Cloning &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <p>Behavior Cloning (BC)</p>-->
+<!--          <video id="BC" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/open_right_door_bc_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; MOMA &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <p>MOMA-Force w/o FC</p>-->
+<!--          <video id="MOMA" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/open_right_door_moma_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; MOMA-Force &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <p>MOMA-Force</p>-->
+<!--          <video id="MOMA-Force" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/open_right_door_moma_force_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; open_right_door end &ndash;&gt;-->
+
+<!--  &lt;!&ndash; open_left_door &ndash;&gt;-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered">-->
+
+<!--      &lt;!&ndash; Behavior Cloning &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/open_left_door_bc_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; MOMA &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <video id="open_left_door_moma" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/open_left_door_moma_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; MOMA-Force &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <video id="open_left_door_moma_force" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/open_left_door_moma_force_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; open_left_door end &ndash;&gt;-->
+
+<!--  &lt;!&ndash; rotate_tap &ndash;&gt;-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered">-->
+
+<!--      &lt;!&ndash; Behavior Cloning &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <video id="rotate_tap_bc" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/rotate_tap_bc_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; MOMA &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <video id="rotate_tap_moma" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/rotate_tap_moma_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; MOMA-Force &ndash;&gt;-->
+<!--      <div class="column">-->
+<!--        <div class="content">-->
+<!--          <video id="rotate_tap_moma_force" autoplay controls muted loop playsinline height="100%">-->
+<!--            <source src="./static/videos/comp/rotate_tap_moma_force_720.mov"-->
+<!--                    type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; open_left_door end &ndash;&gt;-->
+<!--</section>-->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @inproceedings{zhangxu2023invig
+      author    = {Zhang, Hanbo and Xu, Jie and Mo, Yuchen and Kong, Tao},
+      title     = {InViG: Open-Ended Interactive Visual Grounding in Human-Robot Interaction with 500K Dialogues},
+<!--      booktitle = {},-->
+      year      = {2023}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+        <div class="content">
+          <p>
+            The website template was adapted from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>
