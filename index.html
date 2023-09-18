@@ -47,19 +47,19 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation</h1>
+          <h1 class="title is-1 publication-title">InViG: Open-Ended Interactive Visual Grounding in Human-Robot Interaction with 500K Dialogues</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Hanbo Zhang*<sup>*</sup>,
+              Hanbo Zhang<sup>*</sup>,
             </span>
             <span class="author-block">
-              Jie Xu*<sup>*</sup>,
+              Jie Xu<sup>*</sup>,
             </span>
             <span class="author-block">
-              Yuchen Mo<sup>*</sup>,
+              Yuchen Mo,
             </span>
             <span class="author-block">
-              Tao Kong<sup>*</sup>,
+              Tao Kong,
             </span>
           </div>
 
@@ -101,6 +101,15 @@
                   <span>Video</span>
                 </a>
               </span>
+              <span class="link-block">
+              <a href="https://github.com/openivg/openivg.github.io"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </span>
             </div>
           </div>
         </div>
@@ -197,7 +206,8 @@
           </p>
         </div>
         </h3>
-        <img id="comparison" width="70%" src="static/images/comptable.png">
+        <br>
+        <img id="comparison" width="100%" src="static/images/comptable.png">
       </div>
     </div>
   </div>
@@ -217,24 +227,25 @@
           </p>
         </div>
         </h3>
-        <img id="main_result" width="100%" src="static/images/invig_500k_examples.jpg">
+        <br>
+        <img id="invig500k samples" width="70%" src="static/images/invig_500k_examples.jpg">
       </div>
     </div>
-    <!-- force -->
-     <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-        <h3 class="has-text-centered">
-          <div class="content has-text-justified">
-          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are
-            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has
-            a smaller force variance, indicating less oscillation and more stable contact during the rollout.
-          </p>
-        </div>
-        </h3>
-        <img id="force" width="100%" src="static/images/force.jpeg">
-      </div>
-    </div>
-  </div>
+<!--    &lt;!&ndash; force &ndash;&gt;-->
+<!--     <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-six-fifths">-->
+<!--        <h3 class="has-text-centered">-->
+<!--          <div class="content has-text-justified">-->
+<!--          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are-->
+<!--            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has-->
+<!--            a smaller force variance, indicating less oscillation and more stable contact during the rollout.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        </h3>-->
+<!--        <img id="force" width="100%" src="static/images/force.jpeg">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 </section>
 
 <!--<section class="section">-->
@@ -393,6 +404,8 @@
 <!--  &lt;!&ndash; open_left_door end &ndash;&gt;-->
 <!--</section>-->
 
+<!--      booktitle = {},-->
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -401,7 +414,6 @@
     @inproceedings{zhangxu2023invig
       author    = {Zhang, Hanbo and Xu, Jie and Mo, Yuchen and Kong, Tao},
       title     = {InViG: Open-Ended Interactive Visual Grounding in Human-Robot Interaction with 500K Dialogues},
-<!--      booktitle = {},-->
       year      = {2023}
     }
 </code></pre>
