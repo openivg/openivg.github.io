@@ -118,30 +118,21 @@
   </div>
 </section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item open_left_door_mute">
-          <video poster="" id="open_left_door_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/demo1.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item open_cabinet_drawer_mute">
-          <video poster="" id="open_cabinet_drawer_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/demo2.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item open_right_door_mute">
-          <video poster="" id="open_right_door_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/demo3.mov"
-                    type="video/mp4">
-          </video>
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src=""
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
+    <!-- /Paper video. -->
+
   </div>
 </section>
 
@@ -168,19 +159,6 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src=""
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!-- /Paper video. -->
-
   </div>
 </section>
 
@@ -210,201 +188,47 @@
         <img id="comparison" width="100%" src="static/images/comptable.png">
       </div>
     </div>
-  </div>
-</section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- main result -->
-     <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3">Samples</h2>
+<!--        <h2 class="title is-3">Samples</h2>-->
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
           <p>
-            Some samples from InViG 500K:
+            Some samples from InViG 21K and InViG 500K:
           </p>
         </div>
         </h3>
         <br>
-        <img id="invig500k samples" width="70%" src="static/images/invig_500k_examples.jpg">
+        <img id="invig samples" width="100%" src="static/images/examples.jpg">
       </div>
     </div>
-<!--    &lt;!&ndash; force &ndash;&gt;-->
-<!--     <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-six-fifths">-->
-<!--        <h3 class="has-text-centered">-->
-<!--          <div class="content has-text-justified">-->
-<!--          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are-->
-<!--            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has-->
-<!--            a smaller force variance, indicating less oscillation and more stable contact during the rollout.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--        </h3>-->
-<!--        <img id="force" width="100%" src="static/images/force.jpeg">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  </div>
 </section>
 
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; main result &ndash;&gt;-->
-<!--     <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-six-fifths">-->
-<!--        <h2 class="title is-3">Samples</h2>-->
-<!--        <h3 class="has-text-centered">-->
-<!--          <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            Some samples from InViG 500K:-->
-<!--          </p>-->
-<!--        </div>-->
-<!--        </h3>-->
-<!--        <img id="main_result" width="100%" src="static/images/invig_500k_examples.jpg">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; force &ndash;&gt;-->
-<!--     <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-six-fifths">-->
-<!--        <h3 class="has-text-centered">-->
-<!--          <div class="content has-text-justified">-->
-<!--          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are-->
-<!--            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has-->
-<!--            a smaller force variance, indicating less oscillation and more stable contact during the rollout.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--        </h3>-->
-<!--        <img id="force" width="100%" src="static/images/force.jpeg">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-<!--<section class="section">-->
-
-<!--  &lt;!&ndash; open_right_door &ndash;&gt;-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="columns is-centered">-->
-
-<!--      &lt;!&ndash; Behavior Cloning &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <p>Behavior Cloning (BC)</p>-->
-<!--          <video id="BC" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/open_right_door_bc_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      &lt;!&ndash; MOMA &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <p>MOMA-Force w/o FC</p>-->
-<!--          <video id="MOMA" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/open_right_door_moma_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      &lt;!&ndash; MOMA-Force &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <p>MOMA-Force</p>-->
-<!--          <video id="MOMA-Force" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/open_right_door_moma_force_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-<!--    </div>-->
-<!--  </div>-->
-<!--  &lt;!&ndash; open_right_door end &ndash;&gt;-->
-
-<!--  &lt;!&ndash; open_left_door &ndash;&gt;-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="columns is-centered">-->
-
-<!--      &lt;!&ndash; Behavior Cloning &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/open_left_door_bc_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      &lt;!&ndash; MOMA &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <video id="open_left_door_moma" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/open_left_door_moma_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      &lt;!&ndash; MOMA-Force &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <video id="open_left_door_moma_force" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/open_left_door_moma_force_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-<!--    </div>-->
-<!--  </div>-->
-<!--  &lt;!&ndash; open_left_door end &ndash;&gt;-->
-
-<!--  &lt;!&ndash; rotate_tap &ndash;&gt;-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="columns is-centered">-->
-
-<!--      &lt;!&ndash; Behavior Cloning &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <video id="rotate_tap_bc" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/rotate_tap_bc_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      &lt;!&ndash; MOMA &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <video id="rotate_tap_moma" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/rotate_tap_moma_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      &lt;!&ndash; MOMA-Force &ndash;&gt;-->
-<!--      <div class="column">-->
-<!--        <div class="content">-->
-<!--          <video id="rotate_tap_moma_force" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/comp/rotate_tap_moma_force_720.mov"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-<!--    </div>-->
-<!--  </div>-->
-<!--  &lt;!&ndash; open_left_door end &ndash;&gt;-->
-<!--</section>-->
-
-<!--      booktitle = {},-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Interactive Visual Grounding Demos</h2>
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>
+            We have demonstrated some demos of open-ended interactive demos here generated by our baseline
+            solutions. The initial input of our models only includes an image and an initial referential
+            expression. All other dialogue contents and bounding boxes are generated automatically by our models
+            of the Guessor, Questioner, and Oracle. Bounding box candidates of objects are generated using
+            <a href="https://github.com/facebookresearch/Detic">Detic</a> detector.
+          </p>
+        </div>
+        </h3>
+        <br>
+        <img id="demos" width="100%" src="static/images/self_play_demos.jpg">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="section" id="BibTeX">

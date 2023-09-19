@@ -1,16 +1,14 @@
 # Nerfies
 
-This is the repository that contains source code for the [Visual-Force Imitation for Real-World Mobile Manipulation](https://visual-force-imitation.github.io).
+This is the repository that contains source code for the [InViG Dataset](https://openivg.github.io).
 
 If you find it useful for your work please cite:
 ```
-@inproceedings{yang2023visualforce
-  author    = {Yang, Taozheng and Jing, Ya and Wu, Hongtao and Xu, Jiafeng and Sima, Kuankuan and Chen, 
-               Guangzeng and Sima, Qie and Kong, Tao},
-  title     = {Visual-Force Imitation for Real-World Mobile Manipulation},
-  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  year      = {2023},
-}
+@inproceedings{zhangxu2023invig
+      author    = {Zhang, Hanbo and Xu, Jie and Mo, Yuchen and Kong, Tao},
+      title     = {InViG: Open-Ended Interactive Visual Grounding in Human-Robot Interaction with 500K Dialogues},
+      year      = {2023}
+    }
 ```
 
 # Website License
